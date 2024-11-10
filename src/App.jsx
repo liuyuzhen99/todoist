@@ -1,15 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
-
-
+import { useState } from 'react';
+import { Content } from './components/layouts/Content';
+import { Header } from './components/layouts/Header';
 
 function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <p>Hello there!</p>
-      </header>
+      <Header/>
+      <Content/>
     </div>
   )
 }
