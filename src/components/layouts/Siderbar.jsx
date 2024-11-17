@@ -11,8 +11,9 @@ import { Projects } from "../Projects";
 
 export const Siderbar = () => {
   const { setSelectedProject } = useSelectedProjectValue;
-  const { active, setActive } = useState("inbox");
-  const { showProjects, setShowProjects } = useState(true);
+  const [active, setActive] = useState("inbox");
+  const [showProjects, setShowProjects] = useState(true);
+
   return (
     <div className="sidebar" data-testid="siderbar">
       <ul className="sidebar__generic">
@@ -41,8 +42,8 @@ export const Siderbar = () => {
         </span>
         <h2>Projects</h2>
       </div>
-      <ul className="sidebar__projects">Projects will be here</ul>
-      <Projects />
+      <ul className="sidebar__projects">{showProjects && <Projects />}</ul>
+      {showProjects && <Projects />}
     </div>
   );
 };
