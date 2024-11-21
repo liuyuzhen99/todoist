@@ -26,7 +26,7 @@ export const Projects = ({ activeValue = null }) => {
         }}
         onClick={() => {
           setActive(project.projectId);
-          setSelectedProject(project.proectId);
+          setSelectedProject(project.projectId);
         }}
       >
         <IndividualProject project={project} />
