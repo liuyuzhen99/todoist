@@ -569,6 +569,16 @@ header {
   }
 }
 
+// Project Overlay
+.project-overlay {
+  @include box-overlay();
+  background-color: white;
+
+  &__list li {
+    @include task-item();
+  }
+}
+
 // Add Project
 .add-project {
   padding-left: 13px;
