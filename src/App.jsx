@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Content } from "./components/layouts/Content";
@@ -5,14 +6,18 @@ import { Header } from "./components/layouts/Header";
 import { ProjectsProvider, SelectedProjectProvider } from "./context";
 import "./App.scss";
 
-function App() {
+function App({ darkModeDefault = false }) {
+  const [darkMode, setDarkMode] = useState(darkModeDefault);
   return (
     <SelectedProjectProvider>
       <ProjectsProvider>
-        <div className="App">
-          <Header />
+        <main
+          data-testid="application"
+          className={darkMode ? "darkmode" : undefined}
+        >
+          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
           <Content />
-        </div>
+        </main>
       </ProjectsProvider>
     </SelectedProjectProvider>
   );
