@@ -4,7 +4,7 @@ import { firebase } from "../firebase";
 
 export const Checkbox = (id) => {
   const archiveTask = () => {
-    firebase.firestore().collection("tasks").doc(id).update({
+    firebase.firestore().collection("tasks").doc(id.id).update({
       archived: true,
     });
   };
@@ -14,6 +14,9 @@ export const Checkbox = (id) => {
       className="checkbox-holder"
       data-testid="checkbox-action"
       onClick={() => archiveTask()}
+      onKeyDown={() => archiveTask()}
+      role="button"
+      tabIndex={0}
     >
       <span className="checkbox" />
     </div>
