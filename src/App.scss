@@ -240,19 +240,18 @@ header {
   }
 
   li {
-    padding-left: 10px;
-    padding-right: 15px;
-
     &:hover .sidebar__project-delete {
       display: block;
     }
   }
 
   &__project {
-    padding: 5px 0;
     cursor: pointer;
 
     div:nth-child(1) {
+      padding: 5px 0;
+      padding-left: 10px;
+      padding-right: 15px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -590,6 +589,14 @@ header {
 
   &__list li {
     @include task-item();
+    padding: 0;
+
+    div:nth-child(1) {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
 
     span:first-of-type {
       margin-right: 10px;
