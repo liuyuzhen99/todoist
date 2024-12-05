@@ -67,6 +67,7 @@ export const AddTask = ({
           onClick={() => setShowMain(!showMain)}
           onKeyDown={() => setShowMain(!showMain)}
           tabIndex={0}
+          aria-label="Add task"
           role="button"
         >
           <span className="add-task__plus">+</span>
@@ -93,6 +94,7 @@ export const AddTask = ({
                     setShowQuickAddTask(false);
                   }}
                   tabIndex={0}
+                  aria-label="Cancel adding task"
                   role="button"
                 >
                   X
@@ -112,6 +114,7 @@ export const AddTask = ({
           />
           <input
             className="add-task__content"
+            aria-label="Enter your task"
             data-testid="add-task-content"
             type="text"
             value={task}
@@ -142,6 +145,7 @@ export const AddTask = ({
                 setShowProjectOverlay(false);
               }}
               tabIndex={0}
+              aria-label="Cancel adding a task"
               role="button"
             >
               Cancel
@@ -153,6 +157,7 @@ export const AddTask = ({
             onClick={() => setShowProjectOverlay(!showProjectOverlay)}
             onKeyDown={() => setShowProjectOverlay(!showProjectOverlay)}
             tabIndex={0}
+            aria-label="Confirm deletion of project"
             role="button"
           >
             <FaRegListAlt />
@@ -163,6 +168,7 @@ export const AddTask = ({
             onClick={() => setShowTaskDate(!showTaskDate)}
             onKeyDown={() => setShowTaskDate(!showTaskDate)}
             tabIndex={0}
+            aria-label="Cancel adding project, do not delete"
             role="button"
           >
             <FaRegCalendarAlt />
