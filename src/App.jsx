@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import React from "react";
 import { useState } from "react";
 import { Content } from "./components/layouts/Content";
 import { Header } from "./components/layouts/Header";
 import { ProjectsProvider, SelectedProjectProvider } from "./context";
 import "./App.scss";
 
-function App({ darkModeDefault = false }) {
+export const App = ({ darkModeDefault = false }) => {
   const [darkMode, setDarkMode] = useState(darkModeDefault);
   return (
     <SelectedProjectProvider>
@@ -21,6 +22,6 @@ function App({ darkModeDefault = false }) {
       </ProjectsProvider>
     </SelectedProjectProvider>
   );
-}
+};
 
 export default App;

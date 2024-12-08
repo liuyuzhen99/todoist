@@ -9,7 +9,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) => {
     showTaskDate && (
       <div className="task-date" data-testid="task-date-overlay">
         <ul className="task-date__list">
-          <li data-testid="test-date-overlay">
+          <li data-testid="test-date-today">
             <div
               onClick={() => {
                 setShowTaskDate(false);
